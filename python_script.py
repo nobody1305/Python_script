@@ -32,14 +32,19 @@ unit = "minute"
 # print(var)
 
 def function_day(days):
-    print(days > 0)
+    condition_check = days > 0
+    print(type(condition_check))
     if days > 0 :
       return f"{days} days are {days*day_in_minute} {unit}"
-    else:
+    elif days == 0 :
+       return "you enter zero, please enter positif number"
+    else :
       return "you enter negative value"
 user_input = input("fill colomn \n")
-user_input_number = int(user_input)
-print(user_input)
 
-var = function_day(user_input_number)
-print(var)
+if not user_input.isalpha() and '.' not in user_input:
+    user_input_number = int(user_input)
+    var = function_day(user_input_number)
+    print(var)
+else :
+    print("your input is not number. please try again")
