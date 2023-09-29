@@ -86,7 +86,9 @@ def function_day(user_input):
         if "." in user_input:
             return "your input is decimal"
         return "your input is not number. please try again"
-    
-user_input = input("fill colomn \n")
-var = function_day(user_input)
-print(var)
+
+user_input = ""
+while user_input != "exit":   
+    user_input = input("fill colomn \n")
+    var = function_day(user_input)
+    print(var)
