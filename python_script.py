@@ -74,8 +74,7 @@ unit = "minute"
 def function_day(user_input):
     try:
         days = int(user_input)
-        condition_check = days > 0
-        print(type(condition_check))
+        print(type(days))
         if days > 0 :
             return f"{days} days are {days*day_in_minute} {unit}"
         elif days == 0 :
@@ -83,12 +82,17 @@ def function_day(user_input):
         else :
             return "you enter negative value"
     except:
+        print(type(user_input))
         if "." in user_input:
             return "your input is decimal"
         return "your input is not number. please try again"
 
 user_input = ""
 while user_input != "exit":   
+    print(type(user_input.split(", ")))
+    print(user_input.split(", "))
     user_input = input("fill colomn \n")
-    var = function_day(user_input)
-    print(var)
+    for days in user_input.split(", "):
+        var = function_day(days)
+        print(var)
+
