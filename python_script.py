@@ -91,8 +91,10 @@ user_input = ""
 while user_input != "exit":   
     print(type(user_input.split(", ")))
     print(user_input.split(", "))
+    print(type(set(user_input.split(", "))))
+    print(set(user_input.split(", ")))
     user_input = input("fill colomn \n")
-    for days in user_input.split(", "):
+    for days in set(user_input.split(", ")):
         var = function_day(days)
         print(var)
 
