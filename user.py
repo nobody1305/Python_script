@@ -14,9 +14,9 @@ class User:
     def get_user_info(self):
         print(f"User {self.name} currently works as a {self.current_job_title}. you can contact {self.email}")
 
-app_user1 = User("email@com", "Faizal", "pass", "Devops Engineer")
-app_user1.get_user_info()
+# app_user1 = User("email@com", "Faizal", "pass", "Devops Engineer")
+# app_user1.get_user_info()
 # app_user1.change_job_title("Head DevOps")
 # app_user1.get_user_info()
-app_user2 = User("mail@com", "rina", "pass", "Seller")
-app_user2.get_user_info()
+# app_user2 = User("mail@com", "rina", "pass", "Seller")
+# app_user2.get_user_info()
