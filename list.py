@@ -5,3 +5,5 @@ print(my_list[3])
 
 my_list.remove("apple")
 print(my_list)
+
+
