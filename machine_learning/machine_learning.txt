@@ -1,0 +1,8 @@
+machine learning step
+
+classification (predict discrete value)
+- multiple classification (hotdog, pizza, ice cream)
+- binary classification (hotdog, not hotdog)(positive, negative)
+regression (predict continuous value)
+
+training model (loss concept)
