@@ -15,4 +15,4 @@ for label in cols[:-1]:
   plt.ylabel("Probability")
   plt.xlabel(label)
   plt.legend()
-  plt.show()
+  plt.sh
