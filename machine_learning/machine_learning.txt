@@ -6,3 +6,9 @@ classification (predict discrete value)
 regression (predict continuous value)
 
 training model (loss concept)
+
+classification method
+1. k-nearest (make classification based on majority in its nearest environment)
+2. naive bayes(make classification based on probability in 2 condition based on bayes rule)
+3. logistic regression(make classification based on sigmoid function)
+4. support vector machines(make classification based on margin line between 2 condition)
