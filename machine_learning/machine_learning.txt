@@ -1,3 +1,10 @@
+initial setup
+- install vscode and miniconda
+- create new env and install python 3.11 together with all needed package
+- open vscode clone repository
+- ctrl+shift+p and select intrepeter python as created from miniconda
+- setup complete
+
 machine learning step
 
 classification (predict discrete value)
