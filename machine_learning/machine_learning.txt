@@ -19,3 +19,8 @@ classification method
 2. naive bayes(make classification based on probability in 2 condition based on bayes rule)
 3. logistic regression(make classification based on sigmoid function)
 4. support vector machines(make classification based on margin line between 2 condition)
+5. Neural Network (make classification/decision based on input layer and multiple neuron(hidden layer) and give the output)
+
+Neural Network 
+backpropagation (a way to reduce loss in model) w(new) = w(old) + a*
+learning rate (how fast model to convert old value to new value in order to reach minimal loss) a*
