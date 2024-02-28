@@ -1,0 +1,11 @@
+how to use this script
+
+1. Install Python 3.7 or a newer version and install google cloud sdk. 
+2. Setup ADC (Application Default Credentials) on your Local Machine. For more information please visit. 
+https://cloud.google.com/docs/authentication/provide-credentials-adc  
+3. Place the file 'application_default_credentials.json' in the same folder as 'gcp_invent_explore.py’. 
+4. change project id, region for the project gcp 
+5. Run the command below on terminal  
+
+pip install google-cloud-container google-api-python-client google-cloud-monitoring xlsxwriter 
+
