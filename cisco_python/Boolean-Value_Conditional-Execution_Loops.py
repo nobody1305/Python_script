@@ -196,7 +196,7 @@ while user_input != key:
     user_input = str(input("Please Enter Word to left the loop:"))
 print("You've successfully left the loop.")
 
-# continue statement - vowel eater
+# The continue statement – the Ugly Vowel Eater
 # Prompt the user to enter a word
 input_user = str(input("Please Enter Word:"))
 # and assign it to the user_word variable.
@@ -209,5 +209,59 @@ for letter in user_word:
     if letter in ("A","I","U","E","O"):
         continue
     print(letter)
+
+word_without_vowels = ""
+
+#The continue statement – the Pretty Vowel Eater
+# Prompt the user to enter a word
+input_user = str(input("Please Input Your Word: "))
+# and assign it to the user_word variable.
+user_word = input_user
+user_word = user_word.upper()
+
+for letter in user_word:
+    # Complete the body of the loop.
+    if letter in ("A","I","U","E","O"):
+        continue
+    word_without_vowels += letter
+# Print the word assigned to word_without_vowels.
+print(word_without_vowels)
+
+# essential while loop
+blocks = int(input("Enter the number of blocks: "))
+total_blocks = blocks
+height = int()
+i = 1
+# Write your code here.
+while total_blocks >= 0:
+    if total_blocks < 0:
+        break
+    else:
+        height = i - 1
+        total_blocks -= i
+        i += 1
+print("The height of the pyramid:", height)
+
+# Collatz's hypothesis - Convert all number to 1
+user_input = int(input("Please Input Your Number: "))
+c0 = user_input
+i = int()
+if c0 > 0:
+    while c0 != 1 :
+        if c0 % 2 == 0:
+            c0 /= 2
+            i += 1
+            print(c0)
+        elif c0 % 2 == 1:
+            c0 = 3 * c0 + 1
+            i +=1
+            print(c0)
+    print("steps = ",i)
+elif c0 == 0:
+    print("You input the wrong number, please input non zero number")
+else:
+    print("You input the wrong number, please input positive number")
+
+
 
 
