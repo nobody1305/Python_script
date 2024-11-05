@@ -38,3 +38,54 @@ print("\nNew list content:", numbers)  # Printing current list content.
 
 print(numbers[-2])
 
+#the basic of list - challenge
+hat_list = [1, 2, 3, 4, 5]  # This is an existing list of numbers hidden in the hat.
+
+# Step 1: write a line of code that prompts the user
+user_input = int(input("Please input your number: "))
+# to replace the middle number with an integer number entered by the user.
+hat_list[2] = user_input
+
+# Step 2: write a line of code that removes the last element from the list.
+del hat_list[-1]
+# Step 3: write a line of code that prints the length of the existing list.
+print(len(hat_list))
+
+print(hat_list)
+
+
+#insert function to list 
+numbers = [111, 7, 2, 1]
+print(len(numbers))
+print(numbers)
+
+###
+
+numbers.append(4)
+
+print(len(numbers))
+print(numbers)
+
+###
+numbers.insert(1, 333)
+numbers.insert(0, 222)
+print(len(numbers))
+print(numbers)
+
+#
+my_list = []  # Creating an empty list.
+
+for i in range(5):
+    my_list.append(i + 1)
+
+print(my_list)
+
+#reverse
+my_list = []  # Creating an empty list.
+
+for i in range(5):
+    my_list.insert(0, i + 1)
+
+print(my_list)
+
+
