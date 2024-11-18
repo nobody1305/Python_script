@@ -88,4 +88,68 @@ for i in range(5):
 
 print(my_list)
 
+#sum
+my_list = [10, 1, 8, 3, 5]
+total = 0
+
+for i in range(len(my_list)):
+    total += my_list[i]
+
+print(total)
+
+#other way of sum
+my_list = [10, 1, 8, 3, 5]
+total = 0
+
+for i in my_list:
+    total += i
+
+print(total)
+
+#swap
+variable_1 = 1
+variable_2 = 2
+
+variable_1, variable_2 = variable_2, variable_1
+
+my_list = [10, 1, 8, 3, 5]
+
+my_list[0], my_list[4] = my_list[4], my_list[0]
+my_list[1], my_list[3] = my_list[3], my_list[1]
+
+print(my_list)
+
+# the beatles
+# step 1
+beatles = []
+print("Step 1:", beatles)
+
+# step 2
+beatles.append("John Lennon")
+beatles.append("Paul McCartney")
+beatles.append("George Harrison")
+print("Step 2:", beatles)
+
+# step 3
+new_member = ["StuSutcliffe", "Pete Best"]
+for member in new_member:
+    beatles.append(member)
+print("Step 3:", beatles)
+
+# step 4
+# del beatles[-1]
+# del beatles[-2]
+for member in new_member:
+    beatles.remove(member)
+print("Step 4:", beatles)
+
+# step 5
+beatles.insert(0, "Ringo Starr")
+print("Step 5:", beatles)
+
+
+# testing list legth
+print("The Fab", len(beatles))
+
+
 
