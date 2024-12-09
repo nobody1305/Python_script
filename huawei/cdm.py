@@ -66,12 +66,13 @@ def extract_job_data(json_data):
     return job_data
 
 # Script 2 Functions
-def extract_data(json_obj):
+def extract_link_data(json_obj):
     results = {}
     ip_pattern = re.compile(r'\b(?:[0-9]{1,3}\.){3}[0-9]{1,3}\b')
     
     for link in json_obj.get("links", []):
         link_name = link.get("name", "Unknown")
+        connector_type = link.get("connector-name", "Unknown")
         configs = link.get("link-config-values", {}).get("configs", [])
         ips = set()
         username = None
@@ -90,12 +91,18 @@ def extract_data(json_obj):
                     port = value
         
         if link_name not in results:
-            results[link_name] = {"IP Addresses": set(), "Username": username, "Port": port}
+            results[link_name] = {
+                "Connector Type": connector_type,
+                "IP Addresses": set(),
+                "Username": username,
+                "Port": port,
+            }
         results[link_name]["IP Addresses"].update(ips)
 
     final_results = [
         {
             "Link Name": name,
+            "Connector Type": data["Connector Type"],
             "IP Addresses": ", ".join(sorted(data["IP Addresses"])),
             "Username": data["Username"],
             "Port": data["Port"],
@@ -107,8 +114,8 @@ def extract_data(json_obj):
 # Main Function
 def main():
     # File paths
-    json_file = 'huawei/cdm_cluster_2.json'
-    excel_file = 'huawei/job_data_cluster_2.xlsx'
+    json_file = 'huawei/cdm_20241205091402.json'
+    excel_file = 'huawei/job_data_cluster_1.xlsx'
     
     # Read JSON
     data = read_json(json_file)
@@ -118,7 +125,7 @@ def main():
     df_jobs = pd.DataFrame(job_data, columns=["No", "Job Name", "Source Link", "Destination Link", "Input Directory", "Output Directory", "Group Name", "Time Filter"])
     
     # Script 2: Extract link data
-    link_data = extract_data(data)
+    link_data = extract_link_data(data)
     df_links = pd.DataFrame(link_data)
     
     # Write to Excel with multiple sheets
